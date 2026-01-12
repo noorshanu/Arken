@@ -57,47 +57,47 @@ const Participation = () => {
           >
             <span className="text-white">Participation</span>
             {' '}
-            <span className="text-blue-400 italic">That Pays</span>
+            <span className="text-[#0034BF] italic">That Pays</span>
           </motion.h2>
 
           {/* Data Points Container */}
           <div className="relative max-w-5xl mx-auto min-h-[400px] md:min-h-[500px]">
-            {/* Connecting Line - from top center to bottom right */}
+            {/* Connecting Lines */}
             <svg 
-              className="absolute top-0 left-0 w-full h-full hidden md:block pointer-events-none"
+              className="absolute top-[-20px] left-0 w-full h-full hidden md:block pointer-events-none"
               style={{ zIndex: 0 }}
             >
+              {/* Horizontal line crossing through the middle of top-center card */}
               <line 
-                x1="50%" 
+                x1="0%" 
                 y1="20%" 
-                x2="75%" 
-                y2="80%" 
-                stroke="#3B82F6" 
+                x2="100%" 
+                y2="20%" 
+                stroke="#0034BF" 
                 strokeWidth="2"
                 strokeLinecap="round"
               />
+              {/* Horizontal line crossing through the middle of bottom-left card - full width */}
               <line 
-                x1="25%" 
+                x1="0%" 
                 y1="80%" 
-                x2="50%" 
-                y2="20%" 
-                stroke="#3B82F6" 
+                x2="100%" 
+                y2="80%" 
+                stroke="#0034BF" 
                 strokeWidth="2"
                 strokeLinecap="round"
-                strokeDasharray="5,5"
-                opacity="0.5"
               />
             </svg>
             
             {/* Top Center Card */}
             <motion.div
               variants={cardVariants}
-              className="bg-white rounded-2xl p-8 md:p-10 mb-8 md:mb-0 md:absolute md:top-0 md:left-1/2 md:transform md:-translate-x-1/2 md:w-80 shadow-xl relative z-10"
+              className="bg-white rounded-full py-6 sm:py-8 px-4 sm:px-12 mb-8 md:mb-0 md:absolute md:top-0 md:left-1/2 md:transform md:-translate-x-1/2 md:w-100 shadow-xl relative z-10 flex gap-4 "
             >
-              <div className="text-5xl md:text-6xl font-bold text-blue-600 mb-3">
+              <div className="text-5xl md:text-6xl font-light text-[#2970FF] mb-3">
                 98%
               </div>
-              <p className="text-gray-600 text-sm md:text-base">
+              <p className="text-gray-600 text-sm md:text-base text-start">
                 Rule-Based Market Resolution
               </p>
             </motion.div>
@@ -105,9 +105,9 @@ const Participation = () => {
             {/* Bottom Left Card */}
             <motion.div
               variants={cardVariants}
-              className="bg-white rounded-2xl p-6 md:p-8 mb-8 md:mb-0 md:absolute md:bottom-0 md:left-0 md:w-64 shadow-xl relative z-10"
+              className="bg-white rounded-full p-6 md:p-8 mb-8 md:mb-0 md:absolute md:bottom-0 md:left-0 md:w-64 shadow-xl relative z-10"
             >
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-3">
+              <div className="text-4xl md:text-5xl font-bold text-[#0034BF] mb-3">
                 $10K+
               </div>
               <p className="text-gray-600 text-sm md:text-base">
@@ -118,7 +118,7 @@ const Participation = () => {
             {/* Bottom Right Card */}
             <motion.div
               variants={cardVariants}
-              className="bg-blue-600 rounded-2xl p-6 md:p-8 md:absolute md:bottom-0 md:right-0 md:w-64 shadow-xl relative z-10"
+              className="bg-[#0034BF] rounded-full p-6 md:p-8 md:absolute md:bottom-0 md:right-0 md:w-64 shadow-xl relative z-10"
             >
               <div className="text-4xl md:text-5xl font-bold text-white mb-3">
                 50%
@@ -127,6 +127,8 @@ const Participation = () => {
                 Engagement Increase in Active Groups
               </p>
             </motion.div>
+
+            
           </div>
         </motion.div>
       </div>

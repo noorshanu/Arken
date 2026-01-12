@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaBolt, FaLock } from 'react-icons/fa'
+import { CiLock } from "react-icons/ci";
+import { BsLightningCharge } from "react-icons/bs";
 
 const Workflow = () => {
   const containerVariants = {
@@ -37,7 +38,7 @@ const Workflow = () => {
   }
 
   return (
-    <section className="relative py-20 bg-white">
+    <section className="relative py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -52,14 +53,14 @@ const Workflow = () => {
               <img 
                 src="/con.png" 
                 alt="ARKEN Mini App Interface" 
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-auto "
               />
             </div>
           </motion.div>
 
           {/* Right Section - Content */}
           <motion.div variants={rightVariants} className="order-1 lg:order-2">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-5xl  font-bold text-black mb-6 font-poppins">
               Native to Your Workflow.
             </h2>
             
@@ -71,11 +72,11 @@ const Workflow = () => {
             <div className="space-y-6">
               {/* Instant Execution */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
-                  <FaBolt className="text-purple-600 text-xl" />
+                <div className="w-12 h-12 rounded-xl bg-[#8B5CF61A] flex items-center justify-center shrink-0">
+                  <BsLightningCharge className="text-[#8B5CF6] text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Execution</h3>
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Instant Execution</h3>
                   <p className="text-gray-600">
                     Trades settle on Polygon PoS. Fast, cheap, and secure.
                   </p>
@@ -84,11 +85,11 @@ const Workflow = () => {
 
               {/* Non-Custodial */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
-                  <FaLock className="text-purple-600 text-xl" />
+                <div className="w-12 h-12 rounded-xl bg-[#D946EF1A] flex items-center justify-center shrink-0">
+                  <CiLock className="text-[#E879F9] text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Non-Custodial</h3>
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Non-Custodial</h3>
                   <p className="text-gray-600">
                     Your keys, your crypto. Funds never leave your control.
                   </p>

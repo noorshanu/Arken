@@ -82,19 +82,20 @@ const KeyFeatures = () => {
             variants={itemVariants}
             className="inline-block mb-8"
           >
-            <button className="bg-gray-100 border border-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-              Key Features
+         
+            <button className="bg-gray-100 border text-base border-gray-200 text-gray-700 font-medium px-6 py-2 rounded-full hover:bg-gray-200 transition-colors">
+            Key Features
             </button>
           </motion.div>
 
           {/* Main Title */}
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16"
+            className="text-4xl  sm:text-7xl font-bold mb-16"
           >
-            <span className="text-gray-900">Explore Our</span>
+            <span className="text-black font-geist">Explore Our</span>
             <br />
-            <span className="text-blue-600 italic">Standout Features</span>
+            <span className="text-[#0942C3] italic font-playfair">Standout Features</span>
           </motion.h2>
 
           {/* Feature Cards Grid */}

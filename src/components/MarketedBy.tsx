@@ -37,31 +37,19 @@ const MarketedBy = () => {
 
   const stats = [
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      ),
+      icon: "/market.png",
       metric: "95%",
       label: "Market Accuracy",
       description: "Prediction market effectiveness in forecasting global events."
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
+      icon: "/trading.png",
       metric: "$10 M+",
       label: "Trading Activity",
       description: "Liquidity sourced from community markets and external integrations."
     },
     {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      icon: "/success.png",
       metric: "99%",
       label: "Transparent Outcomes",
       description: "Clear resolution rules and on-chain settlement logic."
@@ -76,26 +64,27 @@ const MarketedBy = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center"
+          className=""
         >
           {/* Statistics Button */}
           <motion.div
             variants={itemVariants}
-            className="inline-block mb-8"
+            className=" mb-8 flex justify-center items-center text-center mx-auto"
           >
-            <button className=" font-medium text-[#17171766]/60">
-              Statistics
+                <button className="bg-gray-100 border text-base border-gray-200 text-gray-700 font-medium px-6 py-2 rounded-full hover:bg-gray-200 transition-colors">
+                Statistics
             </button>
+           
           </motion.div>
 
           {/* Main Title */}
           <motion.h2
             variants={itemVariants}
-            className="text-4xl  sm:text-6xl font-bold mb-16"
+            className="text-4xl  sm:text-7xl font-bold mb-16 text-center"
           >
             <span className="text-black font-geist">Markets Powered by</span>
             <br />
-            <span className="text-blue-600 italic font-playfair">Real Insight</span>
+            <span className="text-[#0942C3] italic font-playfair">Real Insight</span>
           </motion.h2>
 
           {/* Statistics Cards */}
@@ -104,25 +93,29 @@ const MarketedBy = () => {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                className="bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-shadow"
+                className="bg-gray-50 border border-gray-200  rounded-2xl p-8 hover:shadow-lg transition-shadow"
               >
                 {/* Icon */}
-                <div className="text-blue-600 mb-6">
-                  {stat.icon}
+                <div className="mb-6">
+                  <img 
+                    src={stat.icon} 
+                    alt={stat.label}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
 
                 {/* Metric */}
-                <div className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                <div className="text-5xl md:text-6xl font-bold text-black mb-4 font-geist">
                   {stat.metric}
                 </div>
 
                 {/* Label */}
-                <div className="text-xl font-semibold text-gray-900 mb-3">
+                <div className="text-xl font-semibold text-black mb-3 font-geist">
                   {stat.label}
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-[#737373] text-sm leading-relaxed font-geist">
                   {stat.description}
                 </p>
               </motion.div>

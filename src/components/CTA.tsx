@@ -28,11 +28,11 @@ const CTA = () => {
   return (
     <section 
       className="relative py-20 overflow-hidden"
-      style={{
-        background: 'radial-gradient(100.09% 100.09% at 50% 3.11%, #0034BF 0%, #000000 100%)'
-      }}
+   
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-[64px] bg-[#1A4ACA]"
+      
+      >
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -45,7 +45,7 @@ const CTA = () => {
             variants={itemVariants}
             className="mb-6"
           >
-            <p className="text-white text-sm uppercase tracking-widest font-semibold">
+            <p className="text-white text-sm uppercase tracking-widest font-semibold font-geist">
               GET STARTED TODAY
             </p>
           </motion.div>
@@ -53,7 +53,7 @@ const CTA = () => {
           {/* Main Headline */}
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-16 leading-tight"
           >
             <span className="font-bold">Turn</span>
             {' '}
@@ -67,7 +67,7 @@ const CTA = () => {
           {/* Descriptive Paragraph */}
           <motion.p
             variants={itemVariants}
-            className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-10"
+            className="text-white/60 text-lg md:text-xl font-light font-geist max-w-2xl mx-auto mb-10"
           >
             ARKEN Markets transforms attention into liquidity and communities into market operators directly inside Telegram
           </motion.p>
@@ -81,7 +81,7 @@ const CTA = () => {
               href="/app"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-gray-900 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg"
+              className="bg-white text-gray-900 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg"
             >
               Launch Telegram App
             </motion.a>
@@ -89,7 +89,7 @@ const CTA = () => {
               href="/docs"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors flex items-center gap-2"
+              className="bg-transparent border-2 border-white/20 text-white font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2"
             >
               Read Docs
               <FaArrowRight className="text-white" />

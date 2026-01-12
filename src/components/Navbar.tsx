@@ -60,19 +60,19 @@ const Navbar = () => {
               <div className="hidden md:flex items-center space-x-8">
                 <a 
                   href="#features" 
-                  className="text-black hover:text-blue-200 transition-colors text-sm font-medium font-geist"
+                  className="text-black hover:text-[#0942C3] transition-colors text-sm font-medium font-geist cursor-pointer  "
                 >
                   Features
                 </a>
                 <a 
                   href="#how-it-works" 
-                  className="text-black hover:text-blue-200 transition-colors text-sm font-medium font-geist"
+                  className="text-black hover:text-[#0942C3] transition-colors text-sm font-medium font-geist cursor-pointer  "
                 >
                   How it Works
                 </a>
                 <a 
                   href="#docs" 
-                  className="text-black hover:text-blue-200 transition-colors text-sm font-medium font-geist"
+                  className="text-black hover:text-[#0942C3] transition-colors text-sm font-medium font-geist"
                 >
                   Docs
                 </a>
