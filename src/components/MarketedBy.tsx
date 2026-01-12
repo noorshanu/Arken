@@ -69,7 +69,7 @@ const MarketedBy = () => {
   ]
 
   return (
-    <section className="relative py-20 bg-white">
+    <section className="relative py-20 bg-[#FCFAF6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -83,7 +83,7 @@ const MarketedBy = () => {
             variants={itemVariants}
             className="inline-block mb-8"
           >
-            <button className="bg-gray-100 border border-gray-200 text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+            <button className=" font-medium text-[#17171766]/60">
               Statistics
             </button>
           </motion.div>
@@ -91,11 +91,11 @@ const MarketedBy = () => {
           {/* Main Title */}
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16"
+            className="text-4xl  sm:text-6xl font-bold mb-16"
           >
-            <span className="text-gray-900">Markets Powered by</span>
+            <span className="text-black font-geist">Markets Powered by</span>
             <br />
-            <span className="text-blue-600 italic">Real Insight</span>
+            <span className="text-blue-600 italic font-playfair">Real Insight</span>
           </motion.h2>
 
           {/* Statistics Cards */}

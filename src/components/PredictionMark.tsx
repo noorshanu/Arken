@@ -26,7 +26,7 @@ const PredictionMark = () => {
 
   return (
     <section 
-      className="relative py-20 overflow-hidden"
+      className="relative py-10 overflow-hidden"
 
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +39,7 @@ const PredictionMark = () => {
         >
           {/* Main Container */}
           <div 
-            className="rounded-3xl p-12 md:p-16 lg:p-20 relative overflow-hidden min-h-[400px] md:min-h-[500px] lg:min-h-[563px]"
+            className="rounded-[40px] py-10 sm:py-30 relative overflow-hidden "
             style={{
               background: 'radial-gradient(100.09% 100.09% at 50% 3.11%, #0034BF 0%, #000000 100%)',
               display: 'flex',
@@ -47,24 +47,22 @@ const PredictionMark = () => {
               justifyContent: 'center'
             }}
           >
+
+            <img src="/text.png" alt="" className='w-full h-auto mb-20 ' />
             {/* Title */}
             <motion.h2
               variants={itemVariants}
-              className="text-center mb-8 text-5xl md:text-7xl lg:text-8xl xl:text-[128px]"
-              style={{
-                fontWeight: 600,
-                lineHeight: '1.1'
-              }}
+              className="text-center mb-8 font-poppins text-white text-5xl sm:hidden block  whitespace-nowrap"
+           
             >
-              <span className="text-white/40">Prediction</span>
-              {' '}
-              <span className="text-white">Market</span>
+              <span className="text-white/30">Pred</span>iction <span className="text-white">M</span><span className='text-white/50'>a</span><span className="text-white/30">rket</span>
             </motion.h2>
+ <img src="/div.png" alt="" className='mx-auto mb-20 ' />
 
             {/* Supporting Text */}
             <motion.p
               variants={itemVariants}
-              className="text-white text-lg md:text-xl max-w-3xl mx-auto text-left"
+              className="text-white text-lg md:text-xl max-w-3xl mx-auto text-center"
             >
               Markets live directly inside Telegram where opinions form, debates unfold, and information moves fastest.
             </motion.p>
@@ -72,8 +70,7 @@ const PredictionMark = () => {
         </motion.div>
       </div>
 
-      {/* Light Blue Line at Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-400"></div>
+
     </section>
   )
 }

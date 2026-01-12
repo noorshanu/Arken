@@ -1,40 +1,40 @@
-import React, { useEffect, useRef } from 'react'
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import React, { useEffect, useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 import { IoIosArrowForward } from "react-icons/io";
 const Hero = () => {
-  const phoneRef = useRef<HTMLDivElement>(null)
+  const phoneRef = useRef<HTMLDivElement>(null);
 
-  const mouseX = useMotionValue(0)
-  const mouseY = useMotionValue(0)
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
   const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [10, -10]), {
     stiffness: 300,
-    damping: 30
-  })
+    damping: 30,
+  });
   const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-10, 10]), {
     stiffness: 300,
-    damping: 30
-  })
+    damping: 30,
+  });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (phoneRef.current) {
-        const rect = phoneRef.current.getBoundingClientRect()
-        const centerX = rect.left + rect.width / 2
-        const centerY = rect.top + rect.height / 2
-        
-        const x = (e.clientX - centerX) / (rect.width / 2)
-        const y = (e.clientY - centerY) / (rect.height / 2)
-        
-        mouseX.set(x)
-        mouseY.set(y)
-      }
-    }
+        const rect = phoneRef.current.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
 
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [mouseX, mouseY])
+        const x = (e.clientX - centerX) / (rect.width / 2);
+        const y = (e.clientY - centerY) / (rect.height / 2);
+
+        mouseX.set(x);
+        mouseY.set(y);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -42,10 +42,10 @@ const Hero = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
-  }
+        delayChildren: 0.3,
+      },
+    },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -53,10 +53,10 @@ const Hero = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6
-      }
-    }
-  }
+        duration: 0.6,
+      },
+    },
+  };
 
   const phoneVariants = {
     hidden: { opacity: 0, y: 100, scale: 0.8 },
@@ -66,10 +66,10 @@ const Hero = () => {
       scale: 1,
       transition: {
         duration: 0.8,
-        delay: 0.5
-      }
-    }
-  }
+        delay: 0.5,
+      },
+    },
+  };
 
   const textVariants = {
     hidden: { opacity: 0 },
@@ -77,10 +77,10 @@ const Hero = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  }
+        delayChildren: 0.2,
+      },
+    },
+  };
 
   const wordVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -88,13 +88,13 @@ const Hero = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5
-      }
-    }
-  }
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-blue-50 via-white to-gray-50 pt-32 pb-20 overflow-hidden">
+    <section className="relative  bg-gradient-to-b from-blue-50 via-white to-gray-50 pt-32 pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -103,10 +103,7 @@ const Hero = () => {
           className="text-center relative"
         >
           {/* Top Banner */}
-          <motion.div
-            variants={itemVariants}
-            className="inline-block mb-16"
-          >
+          <motion.div variants={itemVariants} className="inline-block mb-16">
             <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-full px-8 py-2.5 shadow-sm">
               <p className="text-sm font-medium text-[#171717a5] font-geist">
                 Prediction markets, natively inside Telegram
@@ -121,16 +118,17 @@ const Hero = () => {
           >
             <motion.span variants={wordVariants} className="text-black">
               Speculate
-            </motion.span>
-            {' '}
+            </motion.span>{" "}
             <motion.span variants={wordVariants} className="text-black">
-              the Future,
+              on the Future,
             </motion.span>
             <br />
-            <motion.span variants={wordVariants} className="text-[#0942C3]  font-playfair italic">
+            <motion.span
+              variants={wordVariants}
+              className="text-[#0942C3]  font-playfair italic"
+            >
               Without
-            </motion.span>
-            {' '}
+            </motion.span>{" "}
             <motion.span variants={wordVariants} className="text-black">
               Leaving Telegram
             </motion.span>
@@ -141,9 +139,8 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-12 font-geist"
           >
-            ARKEN Markets bring prediction markets directly into Telegram
-            <br />
-            chats turning live into real, tradable outcomes.
+            ARKEN Markets brings prediction markets directly into Telegram{" "}
+            <br /> chats, turning live discussions into real, tradable outcomes.
           </motion.p>
 
           {/* Phone Image with 3D Tilt Effect */}
@@ -155,7 +152,7 @@ const Hero = () => {
               rotateX,
               rotateY,
               transformStyle: "preserve-3d",
-              perspective: 1000
+              perspective: 1000,
             }}
           >
             <motion.img
@@ -163,7 +160,7 @@ const Hero = () => {
               alt="Arken App on Phone"
               className="w-[292px] h-[391px] drop-shadow-2xl"
               style={{
-                transform: "translateZ(50px)"
+                transform: "translateZ(50px)",
               }}
             />
           </motion.div>
@@ -171,7 +168,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:mt-18 mt-8"
           >
             <motion.a
               href="#"
@@ -199,7 +196,7 @@ const Hero = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
