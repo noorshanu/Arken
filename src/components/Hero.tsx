@@ -94,7 +94,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative  bg-gradient-to-b from-blue-50 via-white to-gray-50 pt-32 pb-20 overflow-hidden">
+    <section className="relative  bg-gradient-to-b from-blue-50 via-white to-gray-50 pt-32 pb-20  overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -103,7 +103,7 @@ const Hero = () => {
           className="text-center relative"
         >
           {/* Top Banner */}
-          <motion.div variants={itemVariants} className="inline-block mb-16">
+          <motion.div variants={itemVariants} className="inline-block mt-5 mb-20">
             <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-full px-8 py-2.5 shadow-sm">
               <p className="text-sm font-medium text-[#171717a5] font-geist">
                 Prediction markets, natively inside Telegram
