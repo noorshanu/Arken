@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 
+import { IoIosArrowForward } from "react-icons/io";
 const Hero = () => {
   const phoneRef = useRef<HTMLDivElement>(null)
 
@@ -99,15 +100,15 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center"
+          className="text-center relative"
         >
           {/* Top Banner */}
           <motion.div
             variants={itemVariants}
-            className="inline-block mb-8"
+            className="inline-block mb-16"
           >
-            <div className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full px-6 py-2.5 shadow-sm">
-              <p className="text-sm font-medium text-gray-700">
+            <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-full px-8 py-2.5 shadow-sm">
+              <p className="text-sm font-medium text-[#171717a5] font-geist">
                 Prediction markets, natively inside Telegram
               </p>
             </div>
@@ -116,21 +117,21 @@ const Hero = () => {
           {/* Main Headline */}
           <motion.h1
             variants={textVariants}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            className="text-4xl sm:text-[90px]  font-bold mb-6 leading-tight font-geist"
           >
-            <motion.span variants={wordVariants} className="text-gray-900">
+            <motion.span variants={wordVariants} className="text-black">
               Speculate
             </motion.span>
             {' '}
-            <motion.span variants={wordVariants} className="text-blue-600">
+            <motion.span variants={wordVariants} className="text-black">
               the Future,
             </motion.span>
             <br />
-            <motion.span variants={wordVariants} className="text-gray-900">
+            <motion.span variants={wordVariants} className="text-[#0942C3]  font-playfair italic">
               Without
             </motion.span>
             {' '}
-            <motion.span variants={wordVariants} className="text-gray-900">
+            <motion.span variants={wordVariants} className="text-black">
               Leaving Telegram
             </motion.span>
           </motion.h1>
@@ -138,7 +139,7 @@ const Hero = () => {
           {/* Supporting Text */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12"
+            className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-12 font-geist"
           >
             ARKEN Markets bring prediction markets directly into Telegram
             <br />
@@ -149,7 +150,7 @@ const Hero = () => {
           <motion.div
             ref={phoneRef}
             variants={phoneVariants}
-            className="relative flex justify-center items-center my-16"
+            className="absolute -top-2 left-0 right-0 bottom-0 flex justify-center items-center my-16"
             style={{
               rotateX,
               rotateY,
@@ -160,7 +161,7 @@ const Hero = () => {
             <motion.img
               src="/phone.png"
               alt="Arken App on Phone"
-              className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto drop-shadow-2xl"
+              className="w-[292px] h-[391px] drop-shadow-2xl"
               style={{
                 transform: "translateZ(50px)"
               }}
@@ -173,18 +174,18 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12"
           >
             <motion.a
-              href="/app"
+              href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gray-900 text-white font-bold px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors shadow-lg"
+              className="bg-[#171717] text-white font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors shadow-lg"
             >
-              Launch App
+              Launch App <IoIosArrowForward className="text-white" />
             </motion.a>
             <motion.a
               href="/markets"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-gray-900 font-bold px-8 py-4 rounded-xl border-2 border-gray-900 hover:bg-gray-50 transition-colors shadow-lg"
+              className="bg-white text-gray-900 font-bold px-8 py-4 rounded-full border border-gray-500 hover:bg-gray-50 transition-colors shadow-lg"
             >
               View Markets
             </motion.a>
