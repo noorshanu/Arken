@@ -27,13 +27,24 @@ const KeyFeatures = () => {
     }
   }
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
+  const leftCardVariants = {
+    hidden: { opacity: 0, x: -80 },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
-        duration: 0.9
+        duration: 1
+      }
+    }
+  }
+
+  const rightCardVariants = {
+    hidden: { opacity: 0, x: 80 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1
       }
     }
   }
@@ -106,7 +117,7 @@ const KeyFeatures = () => {
             <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
               {/* Left Card - Large (800px) */}
               <motion.div
-                variants={cardVariants}
+                variants={leftCardVariants}
                 className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[800px] h-[370px]"
               >
                 {(() => {
@@ -132,7 +143,7 @@ const KeyFeatures = () => {
 
               {/* Right Card - Small (400px) */}
               <motion.div
-                variants={cardVariants}
+                variants={rightCardVariants}
                 className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[400px] h-[370px]"
               >
                 {(() => {
@@ -161,7 +172,7 @@ const KeyFeatures = () => {
             <div className="flex flex-col md:flex-row gap-6 lg:gap-8">
               {/* Left Card - Small (400px) */}
               <motion.div
-                variants={cardVariants}
+                variants={leftCardVariants}
                 className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[400px] h-[370px]"
               >
                 {(() => {
@@ -187,7 +198,7 @@ const KeyFeatures = () => {
 
               {/* Right Card - Large (800px) */}
               <motion.div
-                variants={cardVariants}
+                variants={rightCardVariants}
                 className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[800px] h-[370px]"
               >
                 {(() => {
