@@ -94,7 +94,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative  bg-gradient-to-b from-blue-50 via-white to-gray-50 pt-32 pb-20  overflow-hidden">
+    <section className="relative  bg-gradient-to-b from-blue-50 via-white to-gray-50 pt-20 sm:pt-32 pb-20  overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -103,7 +103,7 @@ const Hero = () => {
           className="text-center relative"
         >
           {/* Top Banner */}
-          <motion.div variants={itemVariants} className="inline-block mt-5 mb-20">
+          <motion.div variants={itemVariants} className="inline-block mt-5 mb-10 sm:mb-20">
             <div className="bg-white backdrop-blur-sm border border-gray-200 rounded-full px-8 py-2.5 shadow-sm">
               <p className="text-sm font-medium text-[#171717a5] font-geist">
                 Prediction markets, natively inside Telegram
@@ -114,7 +114,7 @@ const Hero = () => {
           {/* Main Headline */}
           <motion.h1
             variants={textVariants}
-            className="text-4xl sm:text-[90px]  font-bold mb-6 leading-tight font-geist"
+            className="text-3xl sm:text-[90px]  font-bold mb-6 leading-tight font-geist"
           >
             <motion.span variants={wordVariants} className="text-black">
               Speculate
@@ -137,17 +137,17 @@ const Hero = () => {
           {/* Supporting Text */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-12 font-geist"
+            className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto mb-2 sm:mb-12 font-geist"
           >
             ARKEN Markets brings prediction markets directly into Telegram{" "}
-            <br /> chats, turning live discussions into real, tradable outcomes.
+            <br className="hidden sm:block" /> chats, turning live discussions into real, tradable outcomes.
           </motion.p>
 
           {/* Phone Image with 3D Tilt Effect */}
           <motion.div
             ref={phoneRef}
             variants={phoneVariants}
-            className="absolute -top-2 left-0 right-0 bottom-0 flex justify-center items-center my-16"
+            className="absolute top-4 sm:-top-2 left-0 right-0 bottom-0 flex justify-center items-center my-16"
             style={{
               rotateX,
               rotateY,
@@ -158,7 +158,7 @@ const Hero = () => {
             <motion.img
               src="/phone.png"
               alt="Arken App on Phone"
-              className="w-[292px] h-[391px] drop-shadow-2xl"
+              className="w-[180px] h-[200px] sm:w-[292px] sm:h-[391px] drop-shadow-2xl"
               style={{
                 transform: "translateZ(50px)",
               }}
@@ -168,7 +168,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:mt-18 mt-8"
+            className="flex flex-row gap-4 justify-center items-center sm:mt-18 mt-8"
           >
             <motion.a
               href="#"
