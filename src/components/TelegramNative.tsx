@@ -37,24 +37,24 @@ const TelegramNative = () => {
 
   const features = [
     {
-      color: 'bg-blue-300',
-      text: 'Private & Invite-Only Markets'
+      color: 'bg-[#D1E0FF]',
+      text: 'Private & <br /> Invite-Only Markets'
     },
     {
-      color: 'bg-blue-300',
-      text: 'DAO & Research Group Use Cases'
+      color: 'bg-[#D1E0FF]',
+      text: 'DAO & Research <br /> Group Use Cases'
     },
     {
-      color: 'bg-white',
-      text: 'Creator Earnings & Fee Sharing'
+      color: 'bg-[#E8F9FF]',
+      text: 'Creator Earnings & <br /> Fee Sharing'
     },
     {
-      color: 'bg-pink-300',
-      text: 'Real-Time Market Pricing'
+      color: 'bg-[#FFDEF3]',
+      text: 'Real-Time <br /> Market Pricing'
     },
     {
-      color: 'bg-green-300',
-      text: 'Clear Resolution Sources'
+      color: 'bg-[#DFF9E0]',
+      text: 'Clear Resolution <br /> Sources'
     }
   ]
 
@@ -92,10 +92,10 @@ const TelegramNative = () => {
                 <motion.div
                   key={index}
                   variants={cardVariants}
-                  className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-4 md:p-6 flex items-center gap-3 min-w-[200px]"
+                  className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-2 md:p-3 flex items-center gap-3 min-w-[250px]"
                 >
-                  <div className={`${feature.color} w-4 h-4 rounded`}></div>
-                  <p className="text-white text-sm md:text-base">{feature.text}</p>
+                  <div className={`${feature.color} w-10 h-10 border-2 border-white rounded`}></div>
+                  <p className="text-white text-sm md:text-base text-start" dangerouslySetInnerHTML={{ __html: feature.text }} />
                 </motion.div>
               ))}
             </div>
@@ -106,10 +106,10 @@ const TelegramNative = () => {
                 <motion.div
                   key={index + 3}
                   variants={cardVariants}
-                  className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-4 md:p-6 flex items-center gap-3 min-w-[200px]"
+                  className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-2 md:p-3 flex items-center gap-3 min-w-[250px]"
                 >
-                  <div className={`${feature.color} w-4 h-4 rounded`}></div>
-                  <p className="text-white text-sm md:text-base">{feature.text}</p>
+                  <div className={`${feature.color} w-10 h-10 border-2 border-white rounded`}></div>
+                  <p className="text-white text-sm md:text-base text-start" dangerouslySetInnerHTML={{ __html: feature.text }} />
                 </motion.div>
               ))}
             </div>
@@ -123,7 +123,7 @@ const TelegramNative = () => {
             <img 
               src="/telegramnative.png" 
               alt="Telegram Native App" 
-              className="w-full  h-auto -mt-[230px]"
+              className="w-full  h-auto -mt-[150px] sm:-mt-[230px]"
             />
           </motion.div>
         </motion.div>
