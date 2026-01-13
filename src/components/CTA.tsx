@@ -27,7 +27,7 @@ const CTA = () => {
 
   return (
     <section 
-      className="relative py-20 overflow-hidden"
+      className="relative py-20 overflow-hidden px-5 sm:px-0"
    
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-[64px] bg-[#1A4ACA]"
@@ -38,7 +38,7 @@ const CTA = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-center rounded-3xl p-12 md:p-16"
+          className="text-center rounded-3xl p-10 sm:p-12 md:p-16"
         >
           {/* Top Banner */}
           <motion.div
@@ -53,11 +53,11 @@ const CTA = () => {
           {/* Main Headline */}
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-16 leading-tight"
+            className="text-3xl sm:text-5xl font-bold text-white sm:mb-16 mb-2 leading-tight"
           >
             <span className="font-bold">Turn</span>
             {' '}
-            <span className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl italic font-serif" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <span className="text-3xl sm:text-5xl italic font-serif" style={{ fontFamily: 'Playfair Display, serif' }}>
               Conversations
             </span>
             <br />
@@ -67,7 +67,7 @@ const CTA = () => {
           {/* Descriptive Paragraph */}
           <motion.p
             variants={itemVariants}
-            className="text-white/60 text-lg md:text-xl font-light font-geist max-w-2xl mx-auto mb-10"
+            className="text-white/60 text-sm md:text-xl font-light font-geist max-w-2xl mx-auto mb-4 sm:mb-10"
           >
             ARKEN Markets transforms attention into liquidity and communities into market operators directly inside Telegram
           </motion.p>
