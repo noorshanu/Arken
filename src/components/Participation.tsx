@@ -38,9 +38,7 @@ const Participation = () => {
   return (
     <section 
       className="relative py-20 overflow-hidden"
-      style={{
-        background: 'radial-gradient(100.09% 100.09% at 50% 3.11%, #0034BF 0%, #000000 100%)'
-      }}
+    
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -97,7 +95,7 @@ const Participation = () => {
               <div className="text-5xl md:text-6xl font-light text-[#2970FF] mb-3">
                 98%
               </div>
-              <p className="text-gray-600 text-sm md:text-base text-start">
+              <p className="text-gray-400 text-sm md:text-base text-start">
                 Rule-Based Market Resolution
               </p>
             </motion.div>
@@ -105,12 +103,12 @@ const Participation = () => {
             {/* Bottom Left Card */}
             <motion.div
               variants={cardVariants}
-              className="bg-white rounded-full p-6 md:p-8 mb-8 md:mb-0 md:absolute md:bottom-0 md:left-0 md:w-64 shadow-xl relative z-10"
+              className="bg-white rounded-full py-6 sm:py-8 px-4 sm:px-10 mb-8 md:mb-0 md:absolute md:bottom-0 md:left-0 md:w-105 shadow-xl relative z-10 flex gap-4 it "
             >
-              <div className="text-4xl md:text-5xl font-bold text-[#0034BF] mb-3">
+              <div className="text-5xl md:text-6xl font-light text-[#2970FF] mb-3">
                 $10K+
               </div>
-              <p className="text-gray-600 text-sm md:text-base">
+              <p className="text-gray-400 text-sm md:text-base text-start">
                 Creator Monetization Potential
               </p>
             </motion.div>
@@ -118,12 +116,15 @@ const Participation = () => {
             {/* Bottom Right Card */}
             <motion.div
               variants={cardVariants}
-              className="bg-[#0034BF] rounded-full p-6 md:p-8 md:absolute md:bottom-0 md:right-0 md:w-64 shadow-xl relative z-10"
+              className="rounded-full p-6 md:p-8 md:absolute md:bottom-0 md:right-0 md:w-100 shadow-xl relative z-10 flex gap-4 "
+              style={{
+                background: 'linear-gradient(97.66deg, #2D58D9 45%, #BFD7FF 100%)'
+              }}
             >
-              <div className="text-4xl md:text-5xl font-bold text-white mb-3">
+              <div className="text-5xl md:text-6xl font-light text-white mb-3">
                 50%
               </div>
-              <p className="text-white text-sm md:text-base">
+              <p className="text-white text-sm md:text-base text-start">
                 Engagement Increase in Active Groups
               </p>
             </motion.div>
