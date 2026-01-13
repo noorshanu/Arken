@@ -7,7 +7,7 @@ import KeyFeatures from './components/KeyFeatures'
 import Workflow from './components/Workflow'
 import CTA from './components/CTA'
 import Participation from './components/Participation'
-
+import TelegramNative from './components/TelegramNative'
 function App() {
 
   return (
@@ -17,6 +17,7 @@ function App() {
     <PredictionMark />
     <MarketedBy />
     <KeyFeatures />
+    <TelegramNative />
     <Workflow />
     <Participation />
     <CTA />
