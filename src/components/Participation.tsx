@@ -53,16 +53,16 @@ const Participation = () => {
             variants={itemVariants}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16"
           >
-            <span className="text-white">Participation</span>
+            <span className="text-black font-geist">Participation</span> <br />
             {' '}
-            <span className="text-[#0034BF] italic">That Pays</span>
+            <span className="text-[#2970FF] italic font-playfair">That Pays</span>
           </motion.h2>
 
           {/* Data Points Container */}
-          <div className="relative max-w-5xl mx-auto min-h-[400px] md:min-h-[500px]">
+          <div className="relative max-w-5xl mx-auto h-[280px]">
             {/* Connecting Lines */}
             <svg 
-              className="absolute top-[-20px] left-0 w-full h-full hidden md:block pointer-events-none"
+              className="absolute top-4 left-0 w-full h-full hidden md:block pointer-events-none"
               style={{ zIndex: 0 }}
             >
               {/* Horizontal line crossing through the middle of top-center card */}
@@ -75,12 +75,12 @@ const Participation = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
               />
-              {/* Horizontal line crossing through the middle of bottom-left card - full width */}
+              {/* Horizontal line crossing through the middle of bottom cards - spans between cards */}
               <line 
-                x1="0%" 
-                y1="80%" 
-                x2="100%" 
-                y2="80%" 
+                x1="12%" 
+                y1="70%" 
+                x2="87%" 
+                y2="70%" 
                 stroke="#0034BF" 
                 strokeWidth="2"
                 strokeLinecap="round"
