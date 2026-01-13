@@ -60,11 +60,11 @@ const Workflow = () => {
 
           {/* Right Section - Content */}
           <motion.div variants={rightVariants} className="order-1 lg:order-2">
-            <h2 className="text-2xl sm:text-5xl  font-bold text-black mb-6 font-poppins">
+            <h2 className="text-2xl sm:text-5xl  font-medium text-black mb-6 font-poppins">
               Native to Your Workflow.
             </h2>
             
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className=" text-sm sm:text-lg text-gray-600 mb-8 leading-relaxed font-light font-poppins">
               ARKEN isn't a web app trying to fit into Telegram. It's built from the ground up to leverage Telegram's native Mini App capabilities, providing a seamless, high-performance trading experience.
             </p>
 
@@ -76,7 +76,7 @@ const Workflow = () => {
                   <BsLightningCharge className="text-[#8B5CF6] text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Instant Execution</h3>
+                  <h3 className="text-base sm:text-lg  text-black font-medium font-poppins mb-2">Instant Execution</h3>
                   <p className="text-gray-600">
                     Trades settle on Polygon PoS. Fast, cheap, and secure.
                   </p>
@@ -89,7 +89,7 @@ const Workflow = () => {
                   <CiLock className="text-[#E879F9] text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Non-Custodial</h3>
+                  <h3 className="text-base sm:text-lg  text-black font-medium font-poppins mb-2">Non-Custodial</h3>
                   <p className="text-gray-600">
                     Your keys, your crypto. Funds never leave your control.
                   </p>

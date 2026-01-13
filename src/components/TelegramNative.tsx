@@ -79,7 +79,7 @@ const TelegramNative = () => {
           {/* Top Text */}
           <motion.p
             variants={itemVariants}
-            className="text-black text-xl md:text-2xl mb-12 font-geist"
+            className="text-black text-xl sm:text-4xl mb-10 font-normal font-poppins"
           >
             ...and the rest happens in chat
           </motion.p>
@@ -95,7 +95,7 @@ const TelegramNative = () => {
                   className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-2 md:p-3 flex items-center gap-3 min-w-[250px]"
                 >
                   <div className={`${feature.color} w-10 h-10 border-2 border-white rounded`}></div>
-                  <p className="text-white text-sm md:text-base text-start" dangerouslySetInnerHTML={{ __html: feature.text }} />
+                  <p className="text-white text-sm md:text-base text-start font-medium font-poppins" dangerouslySetInnerHTML={{ __html: feature.text }} />
                 </motion.div>
               ))}
             </div>
@@ -109,7 +109,7 @@ const TelegramNative = () => {
                   className="bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-xl p-2 md:p-3 flex items-center gap-3 min-w-[250px]"
                 >
                   <div className={`${feature.color} w-10 h-10 border-2 border-white rounded`}></div>
-                  <p className="text-white text-sm md:text-base text-start" dangerouslySetInnerHTML={{ __html: feature.text }} />
+                  <p className="text-white text-sm md:text-base text-start font-medium font-poppins" dangerouslySetInnerHTML={{ __html: feature.text }} />
                 </motion.div>
               ))}
             </div>
