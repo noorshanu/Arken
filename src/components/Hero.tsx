@@ -174,7 +174,7 @@ const Hero = () => {
               href="#"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#171717] text-white font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors shadow-lg"
+              className="bg-[#171717] text-white text-sm sm:text-base font-bold sm:px-8 px-4 sm:py-4 py-2 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors shadow-lg"
             >
               Launch App <IoIosArrowForward className="text-white" />
             </motion.a>
@@ -182,7 +182,7 @@ const Hero = () => {
               href="/markets"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-gray-900 font-bold px-8 py-4 rounded-full border border-gray-500 hover:bg-gray-50 transition-colors shadow-lg"
+              className="bg-white text-gray-900 text-sm sm:text-base font-bold sm:px-8 px-4 sm:py-4 py-2 rounded-full border border-gray-500 hover:bg-gray-50 transition-colors shadow-lg"
             >
               View Markets
             </motion.a>
