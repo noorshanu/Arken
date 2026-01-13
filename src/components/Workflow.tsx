@@ -9,30 +9,30 @@ const Workflow = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
         delayChildren: 0.1
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
+    hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.6
+        duration: 1
       }
     }
   }
 
   const rightVariants = {
-    hidden: { opacity: 0, x: 30 },
+    hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.6
+        duration: 1
       }
     }
   }
