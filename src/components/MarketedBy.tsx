@@ -93,7 +93,7 @@ const MarketedBy = () => {
               <motion.div
                 key={index}
                 variants={cardVariants}
-                className="bg-gray-50 border border-gray-200  rounded-2xl p-8 hover:shadow-lg transition-shadow"
+                className="bg-white border border-gray-200  rounded-2xl p-8 hover:shadow-lg transition-shadow"
               >
                 {/* Icon */}
                 <div className="mb-6">

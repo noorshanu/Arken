@@ -107,7 +107,7 @@ const KeyFeatures = () => {
               {/* Left Card - Large (800px) */}
               <motion.div
                 variants={cardVariants}
-                className="bg-white border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[800px] h-[370px]"
+                className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[800px] h-[370px]"
               >
                 {(() => {
                   const IconComponent = features[0].icon
@@ -133,7 +133,7 @@ const KeyFeatures = () => {
               {/* Right Card - Small (400px) */}
               <motion.div
                 variants={cardVariants}
-                className="bg-white border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[400px] h-[370px]"
+                className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[400px] h-[370px]"
               >
                 {(() => {
                   const IconComponent = features[1].icon
@@ -162,7 +162,7 @@ const KeyFeatures = () => {
               {/* Left Card - Small (400px) */}
               <motion.div
                 variants={cardVariants}
-                className="bg-white border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[400px] h-[370px]"
+                className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[400px] h-[370px]"
               >
                 {(() => {
                   const IconComponent = features[2].icon
@@ -188,7 +188,7 @@ const KeyFeatures = () => {
               {/* Right Card - Large (800px) */}
               <motion.div
                 variants={cardVariants}
-                className="bg-white border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[800px] h-[370px]"
+                className="bg-[#dde9fd] border-2 border-gray-200 rounded-[48px] py-16 px-8 hover:shadow-lg hover:border-blue-300 transition-all w-full md:w-[800px] h-[370px]"
               >
                 {(() => {
                   const IconComponent = features[3].icon
